@@ -1,6 +1,83 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
 
-    <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}!</h1>
-    <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
+  <h1 id="welcome" class="lead">Welcome, {{person.name}}!</h1>
+  <div class="container" ng-controller="PeopleController as patient">
+    <div class="row">
+
+
+      <form>
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Patient Intake</legend>
+
+          <!-- Text input-->
+          <div class="col-md-6">
+            <div class="form-group">
+              <div>
+                <label for="fullName">Patient Name</label>
+                <input id="fullName" name="fullName" ng-model="patient.newPerson.name" type="text" placeholder="Name" class="form-control input-md">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div>
+                <label for="phoneNumber">SMS Reminder</label>
+                <input id="phoneNumber" name="phoneNumber" ng-model="patient.newPerson.phoneNumber" type="text" placeholder="(xxx) xxx-xxxx" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <div>
+                <label for="notes">Other information if needed</label>
+                <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div>
+                <label for="medication">Medication</label>
+                <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medication" class="medication form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div>
+                <label for="dosage">Dosage/How Often</label>
+                <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="dosage form-control input-md">
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <label for="medication">Medication</label>
+                <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medicationTwo" class="medication form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div>
+                <label for="dosage">Dosage/How Often</label>
+                <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosageTwo" class="dosage form-control input-md">
+              </div>
+            </div>
+            <button class="btn btn-primary" ng-click="patient.addPerson()">Add Person</button>
+
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
 </div>

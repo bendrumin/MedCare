@@ -34,8 +34,9 @@ Link to a read-only version of your scope document or other relevant documentati
 
 High level list of items completed.
 
-- [x] Feature a
-- [x] Feature b
+- [x] Server is up and running
+- [x] The ability to add a patient
+- [x] Users
 
 ### Next Steps
 

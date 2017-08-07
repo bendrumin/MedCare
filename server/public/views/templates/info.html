@@ -1,6 +1,31 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div class="container">
-  <p>
-    In Info
-  </p>
+<div class="container" ng-controller="PeopleController as patient">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              Patient Name
+            </th>
+            <th>Phone Number</th>
+            <th>Notes</th>
+            <th>Medication</th>
+            <th>Dosage</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="person in patient.people track by $index" >
+            <td>{{person.name}}</td>
+            <td>{{person.phoneNumber}}</td>
+            <td>{{person.notes}}</td>
+            <td>{{person.medication}}</td>
+            <td>{{person.dosage}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
