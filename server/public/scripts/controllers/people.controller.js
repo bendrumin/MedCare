@@ -1,7 +1,7 @@
 myApp.controller('PeopleController', ['$http', function($http) {
     var vm = this;
     vm.newPerson = {};
-
+    vm.medications = [];
     // get the people data from the server and fill the DOM
     getPeople();
 
@@ -27,5 +27,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
         vm.people = response.data;
       });
     }
-
+function addMedication() {
+  
+}
 }]);

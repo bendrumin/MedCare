@@ -16,7 +16,7 @@
         </thead>
         <tbody>
 
-          <tr ng-repeat="person in patient.people track by $index" >
+          <tr ng-repeat="person in patient.people track by model.id" >
             <td>{{person.name}}</td>
             <td>{{person.phoneNumber}}</td>
             <td>{{person.notes}}</td>

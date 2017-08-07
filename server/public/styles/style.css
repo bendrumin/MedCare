@@ -78,3 +78,8 @@ li a:hover {
   text-decoration: underline;
   color: #eee;
 }
+textarea.form-control {
+  height: 163px; !important
+width: 555px;
+resize: none;
+}

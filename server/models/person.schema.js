@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
 
 // create the Schema
 var personSchema = new Schema({
-  name: {type: String, required: true},
+  name: {type: String, required: true, index: { unique: true }},
   phoneNumber: {type: Number, required: true},
   notes: {type: String, required: true},
-  medication: {type: String, required: true},
+  medication: {{type: String, required: true},
   dosage: {type: String, required: true}
 });
 
