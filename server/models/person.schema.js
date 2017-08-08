@@ -6,8 +6,8 @@ var personSchema = new Schema({
   name: {type: String, required: true},
   phoneNumber: {type: Number, required: true},
   notes: {type: String, required: true},
-  medication: {type: String, required: true},
-  dosage: {type: String, required: true}
+  medication: {type: String},
+  dosage: {type: String}
 });
 
 // export our model
