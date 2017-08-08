@@ -1,7 +1,6 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
 
-  <h1 id="welcome" class="lead">Welcome, {{person.name}}!</h1>
   <div class="container" ng-controller="PeopleController as patient">
     <div class="row">
       <form>
@@ -33,14 +32,16 @@
                 <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes"></textarea>
               </div>
             </div>
-            <button class="btn btn-primary" ng-click="patient.addPerson()" href="/info.html">Add Person</button>
+            <button class="btn btn-primary" ng-click="patient.addPerson(patient.newPerson.name, patient.newPerson.phoneNumber, patient.newPerson.notes)">Add Person</button>
+
           </div>
+
           <div class="col-md-3">
               <!-- Text input-->
               <div class="form-group">
                 <div>
                   <label for="medication">Medication</label>
-                  <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medication" class="medication form-control input-md">
+                  <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medication" class="form-control input-md">
 
                 </div>
               </div>
@@ -50,11 +51,14 @@
               <div class="form-group">
                 <div>
                   <label for="dosage">Dosage/How Often</label>
-                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="dosage form-control input-md">
+                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-sm">
+
                 </div>
+                <button type="button" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage)">+</button>
+
               </div>
-              <button type="button" name="button" ng-click="addMedication()">Add Medication</button>
             </div>
+
         </div>
 
       </fieldset>

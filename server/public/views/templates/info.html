@@ -16,14 +16,21 @@
         </thead>
         <tbody>
 
-          <tr ng-repeat="person in patient.people track by model.id" >
-            <td>{{person.name}}</td>
+          <tr ng-repeat="person in patient.people" >
+            <td class="align-middle">{{person.name}}</td>
             <td>{{person.phoneNumber}}</td>
             <td>{{person.notes}}</td>
-            <td>{{person.medication}}</td>
-            <td>{{person.dosage}}</td>
+            <td>
+              <p ng-repeat="meds in person.allMeds">
+                {{meds.medication}}
+              </p>
+            </td>
+            <td>
+              <p ng-repeat="meds in person.allMeds">
+                {{meds.dosage}}
+              </p>
+            </td>
           </tr>
-
         </tbody>
       </table>
     </div>

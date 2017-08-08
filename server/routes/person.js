@@ -20,6 +20,7 @@ router.post('/', function(req, res) {
 
   // create an object instance from our Person model
   var addPerson = new Person(req.body);
+  console.log("Created from Person schema: ", addPerson);
 
   // insert into our collection
   addPerson.save(function(err, data) {
