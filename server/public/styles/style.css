@@ -4,18 +4,52 @@ body, html {
   font-family: sans-serif;
   font-size: 14px;
 }
+/* Login */
 
-.instructions .container h1 {
-  font-size: 32px;
-  font-weight: 600;
+body {
+	background: #eee !important;
 }
 
-.instructions {
-  background-color: #333333;
-  color: #DDDDDD;
-  padding: 15px;
+.wrapper {
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+.form-signin {
+	max-width: 380px;
+	padding: 15px 35px 45px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.form-signin .form-signin-heading,
+  .form-signin .checkbox {
+	margin-bottom: 30px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+/* End Login */
 #entryForm {
   margin-top: 14px;
 }
@@ -23,11 +57,20 @@ body, html {
 #container {
   margin-top: 10px;
 }
-
+.navbar.navbar-default {
+    background-color: white;
+    border: none;
+}
 .container p{
   margin-top : 14px;
 }
-
+h1.lead {
+    margin: 0;
+    padding-top: 10px;
+    font-family: bebas-neue, sans-serif;
+font-style: normal;
+font-weight: 400;
+}
 .message {
   padding: 10px 0;
 }
@@ -48,12 +91,11 @@ body, html {
   margin-left: 10px;
 }
 
-.navbar {
-  background-color: #333333;
-  width: 100%;
-  border-radius: 0px;
-}
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -77,4 +119,16 @@ li a {
 li a:hover {
   text-decoration: underline;
   color: #eee;
+}
+textarea.form-control {
+  height: 163px; !important
+width: 555px;
+resize: none;
+}
+.container td p {
+    margin: 0;
+    padding: 0;
+}
+tbody > tr > td {
+     vertical-align: middle !important;
 }
