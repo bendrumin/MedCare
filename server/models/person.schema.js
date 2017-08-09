@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var medicationSchema = new Schema({
   medication: {type: String},
-  dosage: {type: String}
+  dosage: {type: String} 
 });
 
 // create the Schema
