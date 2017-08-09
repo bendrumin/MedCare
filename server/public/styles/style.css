@@ -67,10 +67,15 @@ body {
 h1.lead {
     margin: 0;
     padding-top: 10px;
-    font-family: bebas-neue, sans-serif;
-font-style: normal;
-font-weight: 400;
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 700;
 font-size: 48px;
+}
+h1.lead span {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 200;
 }
 
 
@@ -137,8 +142,12 @@ resize: none;
     margin: 0;
     padding: 0;
 }
+tbody {
+  font-size: 14px;
+}
 tbody > tr > td {
      vertical-align: middle !important;
+
 }
 .container legend {
   padding: 15px;
