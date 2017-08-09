@@ -22,7 +22,7 @@
               <div class="form-group">
                 <div>
                   <label for="phoneNumber">SMS Reminder</label>
-                  <input id="phoneNumber" name="phoneNumber" ng-model="patient.newPerson.phoneNumber" type="text" placeholder="(xxx) xxx-xxxx" class="form-control input-md">
+                  <input id="phoneNumber" name="phoneNumber" onBlur="addHyphen()" ng-model="patient.newPerson.phoneNumber" type="number" placeholder="(xxx) xxx-xxxx" class="form-control input-md">
 
                 </div>
               </div>
@@ -49,8 +49,7 @@
                   <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medication" class="form-control input-md">
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
+
               <!-- Text input-->
               <div class="form-group">
                 <div>
@@ -60,16 +59,16 @@
               </div>
 
               <button type="button" class="btn btn-info" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage)">Add medication</button>
-
+              <div ng-repeat="meds in person.allMeds">
+                    <p>{{meds.medication}}</p>
+              </div>
             </div>
 
           </div>
         </div>
       </fieldset>
     </form>
-    <div class="col-md-6" ng-repeat="meds in person.allMeds">
-          <p>{{meds.medication}}</p>
-    </div>
+
   </div>
 </div>
 
