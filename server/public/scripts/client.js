@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ui.utils']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -13,7 +13,7 @@ myApp.config(function($routeProvider, $locationProvider) {
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as lc'
     })
-    .when('/patientInput', {
+    .when('/user', {
       templateUrl: '/views/templates/user.html',
       controller: 'UserController as uc',
       resolve: {
@@ -22,9 +22,9 @@ myApp.config(function($routeProvider, $locationProvider) {
         }
       }
     })
-    .when('/patients', {
+    .when('/info', {
       templateUrl: '/views/templates/info.html',
-      controller: 'InfoController',
+      controller: 'InfoController as ic',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();

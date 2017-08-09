@@ -13,6 +13,7 @@
             <th>Notes</th>
             <th>Medication</th>
             <th>Dosage</th>
+            <th>How Often</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -33,8 +34,16 @@
               </p>
             </td>
             <td>
-              <button ng-click="patient.deletePerson(person._id)" class="btn btn-danger">Delete</button>
+              <p ng-repeat="meds in person.allMeds">
+                {{meds.howOften}} time per day
+              </p>
             </td>
+            <td>
+              <button type="button" ng-click="patient.deletePerson(person._id)" class="btn btn-danger btn-sm">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+            </td>
+
           </tr>
         </tbody>
       </table>

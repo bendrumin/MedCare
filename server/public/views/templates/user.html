@@ -2,15 +2,15 @@
 <div class="container mainSection">
 
   <div class="container" ng-controller="PeopleController as patient">
-    <div class="col-md-12">
+    <div class="col-md-12 inputForm">
       <div class="row">
         <form>
           <fieldset>
             <!-- Form Name -->
             <legend>Patient Intake</legend>
             <!-- Text input-->
-            <div class="col-md-6 borderRight">
-              <h4>New Patient Form</h4>
+            <div class="col-md-4 borderRight">
+              <h3>New Patient Form</h3>
               <div class="form-group">
                 <div>
                   <label for="fullName">Patient Name</label>
@@ -22,7 +22,7 @@
               <div class="form-group">
                 <div>
                   <label for="phoneNumber">SMS Reminder</label>
-                  <input id="phoneNumber" name="phoneNumber" onBlur="addHyphen()" ng-model="patient.newPerson.phoneNumber" type="number" placeholder="(xxx) xxx-xxxx" class="form-control input-md">
+                  <input id="phoneNumber" name="phoneNumber" ui-mask="999-999-9999" ng-model="patient.newPerson.phoneNumber" type="text" class="form-control input-md">
 
                 </div>
               </div>
@@ -30,18 +30,17 @@
               <!-- Textarea -->
               <div class="form-group">
                 <div>
-                  <label for="notes">Other information if needed</label>
+                  <label for="notes">Notes</label>
                   <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes"></textarea>
                 </div>
               </div>
-              <button class="btn btn-primary" ng-click="patient.addPerson(patient.newPerson.name, patient.newPerson.phoneNumber, patient.newPerson.notes)">Add Person</button>
 
             </div>
 
-            <div class="col-md-6">
-              <h4>
+            <div class="col-md-4 borderRight">
+              <h3>
                 Adding a medication is not required
-              </h4>
+              </h3>
               <!-- Text input-->
               <div class="form-group">
                 <div>
@@ -53,19 +52,66 @@
               <!-- Text input-->
               <div class="form-group">
                 <div>
-                  <label for="dosage">Dosage/How Often</label>
-                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-md">
+                  <label for="dosage">Dosage</label>
+                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-sm">
+                </div>
+              </div>
+              <div class="form-group">
+                <div>
+                  <label for="dosage">How Often (Times per day)</label>
+                  <input name="dosage" type="number" placeholder="" ng-model="patient.newPerson.howOften" class="form-control input-md">
                 </div>
               </div>
 
-              <button type="button" class="btn btn-info" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage)">Add medication</button>
-              <div ng-repeat="meds in person.allMeds">
-                    <p>{{meds.medication}}</p>
-              </div>
+              <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.howOften)"><span class="glyphicon glyphicon-plus"></span></button>
             </div>
+            <div class="col-md-4">
+              <table class="table table-responsive medList">
+                <h3>New medication will be added here</h3>
+                <thead>
+                  <tr>
+                    <th>
+                      Medication
+                    </th>
+                    <th>
+                      Dosage
+                    </th>
+                    <th>
+                      How Often
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td ng-repeat="meds in patient.allMeds">
+                      <p>{{meds.medication}}</p>
+                    </td>
+                    <td ng-repeat="meds in patient.allMeds">
+                      <p>{{meds.dosage}}</p>
+                    </td>
+                    <td ng-repeat="meds in patient.allMeds">
+                      <p>{{meds.howOften}} times per day</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-primary btn-lg" ng-click="patient.addPerson(patient.newPerson.name, patient.newPerson.phoneNumber, patient.newPerson.notes)">Add Patient</button>
+
+            </div>
           </div>
         </div>
+
       </fieldset>
     </form>
 

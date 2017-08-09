@@ -48,6 +48,21 @@ router.post('/search', function(req, res) {
     }
   });
 });
+router.delete('/:id', function(req, res) {
+  console.log('delete with id: ', req.params.id);
 
+  Person.findByIdAndRemove(
+    { _id: req.params.id }, // how do i find this document?
+    function(err, data) {
+      if(err) {
+        console.log('remove error: ', err);
+        res.sendStatus(500);
+      } else {
+        res.sendStatus(200);
+      }
+    }
+  );
+
+});
 
 module.exports = router;

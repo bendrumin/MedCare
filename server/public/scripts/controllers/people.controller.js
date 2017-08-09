@@ -17,6 +17,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
     $http.post('/person', vm.newPerson)
     .then(function(response) {
       console.log('added person: ', response);
+      $setPristine(true);
       getPeople();
     });
   }
@@ -34,20 +35,15 @@ myApp.controller('PeopleController', ['$http', function($http) {
       vm.people = response.data;
     });
   }
-  vm.addMedication = function(med, dosage) {
+  vm.addMedication = function(med, dosage, howOften) {
     var newMed = {
       medication: med,
-      dosage: dosage
+      dosage: dosage,
+      howOften: howOften
     }
     console.log(vm.newPerson.medication);
     vm.allMeds.push(newMed);
     console.log(dosage);
     console.log(vm.allMeds);
   }
-  function addHyphen() {
-    var t = document.forms['the_form'].elements['the_text'];
-      if (t.value.length > 0) {
-        t.value = t.value.substring(0,4) + "-" + t.value.substring(4, t.value.length);
-      }
-}
 }]);

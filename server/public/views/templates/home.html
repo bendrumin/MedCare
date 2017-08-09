@@ -1,8 +1,10 @@
 <div class="container login">
-  <h1 class="lead alert alert-danger" role="alert" ng-if="lc.message != ''">{{lc.message}}</h2>
 
 <div class="wrapper">
+  <div class="alert alert-danger loginError" role="alert" ng-if="lc.message != ''">{{lc.message}}</div>
+
   <form ng-submit="lc.login()" class="form-signin">
+
       <h2 class="form-signin-heading">Please login</h2>
       <input type="text" class="form-control" name="username" placeholder="Username" ng-model="lc.user.username" required="" autofocus="" />
       <input type="password" ng-model="lc.user.password" class="form-control" name="password" placeholder="Password" required=""/>

@@ -1,0 +1,182 @@
+body {
+  background:#6979FF;
+}
+
+body,html {
+  font-family:serif;
+  font-size:14px;
+  margin:0;
+  padding:0;
+}
+
+#container {
+  margin-top:10px;
+}
+
+#entryForm,.container p {
+  margin-top:14px;
+}
+
+.addMed {
+  border:0 solid transparent;
+}
+
+.alert.alert-danger.loginError {
+  border-radius:0;
+  margin:0 auto;
+  max-width:380px;
+}
+
+.borderRight {
+  border-right:2px solid #C7DDF9;
+}
+
+.col-md-12.inputForm {
+  margin-bottom:25px;
+}
+
+.container legend {
+  padding:15px;
+}
+
+.container td p {
+  margin:0;
+  padding:0;
+}
+
+.form-control {
+  font-size:16px;
+  height:auto;
+  padding:10px;
+  position:relative;
+}
+
+.form-signin {
+  background-color:#fff;
+  border:1px solid rgba(0,0,0,0.1);
+  margin:0 auto;
+  max-width:380px;
+  padding:15px 35px 45px;
+}
+
+.form-signin .checkbox {
+  font-weight:400;
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+  margin-bottom:30px;
+}
+
+.form-signin input[type="password"] {
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  margin-bottom:20px;
+}
+
+.form-signin input[type="text"] {
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  margin-bottom:-1px;
+}
+
+.header {
+  background-color:#54A5FE;
+  color:#FFF;
+}
+
+.message:nth-child(even) {
+  background-color:#f8f8f8;
+}
+
+.message:nth-child(odd) {
+  background-color:#eee;
+}
+
+.navbar-brand {
+  align-items:center;
+  display:flex;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:#FFF!important;
+  font-family:bebas-neue, sans-serif;
+  font-size:24px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  text-decoration:underline;
+}
+
+.navbar-nav {
+  margin:7.5px -15px;
+}
+
+.navbar.navbar-default {
+  background-color:#4CBEFE;
+  border:none;
+}
+
+.wrapper {
+  margin-bottom:80px;
+  margin-top:80px;
+}
+
+=
+h3 {
+  font-family:mr-eaves-modern,sans-serif;
+}
+
+
+
+h1.lead {
+  font-family:le-monde-livre-classic-sc, serif;
+  font-size:48px;
+  font-style:normal;
+  font-weight:500;
+  margin:0;
+  padding-top:10px;
+}
+
+h3 {
+  font-family:le-monde-livre-classic-sc, serif!important;
+  font-style:normal;
+  font-weight:500;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  color:#FFF;
+  display:block;
+  padding:14px 16px;
+  text-align:center;
+  text-decoration:none;
+}
+
+li a:hover {
+  color:#eee;
+  text-decoration:underline;
+}
+
+tbody {
+  font-size:14px;
+}
+
+tbody > tr > td {
+  vertical-align:middle!important;
+}
+
+textarea.form-control {
+  height:163px;
+  importantwidth:555px;
+  resize:none;
+}
+
+ul {
+  list-style-type:none;
+  margin:0;
+  overflow:hidden;
+  padding:0;
+}
