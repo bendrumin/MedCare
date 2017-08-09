@@ -31,9 +31,10 @@
                 {{meds.dosage}}
               </p>
             </td>
-            <td><button type="button" class="btn btn-default">
-  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-</button></td>
+            <td>
+              <button ng-click="patient.deletePerson(person._id)" class="btn btn-danger">Delete</button>
+
+            </td>
           </tr>
         </tbody>
       </table>
