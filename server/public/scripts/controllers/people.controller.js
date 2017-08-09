@@ -11,7 +11,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
       name: name,
       phoneNumber: phoneNumber,
       notes: notes,
-      allMeds: vm.allMeds
+      allMeds: vm.allMeds 
     };
     console.log('data object going to server: ', vm.newPerson);
     $http.post('/person', vm.newPerson)
