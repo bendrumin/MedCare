@@ -3,50 +3,63 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Here are all the patients in the system</h3>
-      <table class="table table-responsive">
-        <thead>
-          <tr>
-            <th>
-              Patient Name
-            </th>
-            <th>Phone Number</th>
-            <th>Notes</th>
-            <th>Medication</th>
-            <th>Dosage</th>
-            <th>How Often</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="table-responsive table-condenced table-hover">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="name">
+                Patient Name
+              </th>
+              <th class="hidden-sm hidden-xs phoneNumber">Phone Number</th>
+              <th class="hidden-sm hidden-xs notes">Notes</th>
+              <th class="medication">Medication</th>
+              <th class="dosage">Dosage</th>
+              <th class="howOften">How Often</th>
+              <th class="hidden-sm hidden-xs actionButtons">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
 
-          <tr ng-repeat="person in patient.people" >
-            <td class="align-middle">{{person.name}}</td>
-            <td>{{person.phoneNumber}}</td>
-            <td>{{person.notes}}</td>
-            <td>
-              <p ng-repeat="meds in person.allMeds">
-                {{meds.medication}}
-              </p>
-            </td>
-            <td>
-              <p ng-repeat="meds in person.allMeds">
-                {{meds.dosage}}
-              </p>
-            </td>
-            <td>
-              <p ng-repeat="meds in person.allMeds">
-                {{meds.howOften}} time per day
-              </p>
-            </td>
-            <td>
-              <button type="button" ng-click="patient.deletePerson(person._id)" class="btn btn-danger btn-sm">
-                <span class="glyphicon glyphicon-remove"></span>
-              </button>
-            </td>
+            <tr ng-repeat="person in patient.people" >
+              <td class="align-middle name">{{person.name}}</span></td>
+              <td class="phoneNumber">
+                <span ng-show="!rowform.$visible" editable-text="person.phoneNumber" e-class="phoneNumber" e-form="rowform" class="hidden-sm hidden-xs">{{person.phoneNumber}}</span></td>
+              <td class="notes">
+                <span ng-show="!rowform.$visible" editable-textarea="person.notes" e-class="notes" e-form="rowform" class="hidden-sm hidden-xs">{{person.notes}}</span></td>
+              <td class="medication">
+                <p ng-show="!rowform.$visible" editable-text="meds.medication" e-form="rowform" ng-repeat="meds in person.allMeds">
+                  {{meds.medication}}
+                </p>
+              </td>
+              <td class="dosage">
+                <p ng-show="!rowform.$visible" editable-text="meds.dosage" e-form="rowform"  ng-repeat="meds in person.allMeds">
+                  {{meds.dosage}}
+                </p>
+              </td>
+              <td class="howOften">
+                <p ng-show="!rowform.$visible" editable-text="meds.howOften" e-form="rowform" ng-repeat="meds in person.allMeds">
+                  {{meds.howOften}} time per day
+                </p>
+              </td>
+              <td class="actionButtons">
+                <form onaftersave="patient.updatePerson(person)" editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == person">
+                  <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-success">
+                    Save
+                  </button>
+                  <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                    cancel
+                  </button>
+                </form>
+                <div ng-show="!rowform.$visible">
+                  <button type="button" class="btn btn-primary" ng-click="rowform.$show()">Edit</button>
+                  <button type="button" class="btn btn-danger" name="button" ng-click="patient.deletePerson(person._id)">Delete</button>
+                </div>
+              </td>
 
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

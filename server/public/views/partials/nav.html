@@ -1,23 +1,20 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar5">
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
+      <!-- https://plnkr.co/edit/?p=preview -->
+      <div class="navbar-collapse collapse pull-right">
+        <ul class="nav navbar-nav navbar-right" ng-class="!navCollapsed && 'in'">
           <li><a href="#/user">Home</a></li>
           <li><a href="#/info">View Patients</a></li>
           <li><a href="#" ng-click="uc.userService.logout()">Log Out</a></li>
         </ul>
       </div>
-      <!--/.nav-collapse -->
     </div>
-    <!--/.container-fluid -->
   </nav>
-
-</div>

@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ui.utils']);
+var myApp = angular.module('myApp', ['xeditable','ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.utils']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -34,4 +34,8 @@ myApp.config(function($routeProvider, $locationProvider) {
     .otherwise({
       redirectTo: 'home'
     });
+
+});
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });

@@ -78,6 +78,48 @@ body,html {
   border-bottom-right-radius:0;
   margin-bottom:-1px;
 }
+.horizontal-collapse {
+    height: 70px;
+  }
+  .navbar-collapse.in {
+    overflow-y: hidden;
+    max-height: 2000px;
+
+  }
+  .navbar-collapse.collapse {
+          display: block;
+          overflow: hidden;
+          max-height: 0px;
+          -webkit-transition: max-height .3s ease;
+          -moz-transition: max-height .3s ease;
+          -o-transition: max-height .3s ease;
+          transition: max-height .3s ease;
+      }
+  .navbar-collapse.collapse.in {
+          max-height: 2000px;
+      }
+  .navbar-default .navbar-toggle {
+      border: none;
+      background-color: white;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color:#FFF!important;
+    font-family:bebas-neue, sans-serif;
+    font-size:24px;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover {
+    text-decoration:underline;
+  }
+
+  .navbar-nav {
+    margin:7.5px -15px;
+  }
+
+  .navbar.navbar-default {
+    background-color:#4CBEFE;
+    border:none;
+  }
 
 .header {
   background-color:#54A5FE;
@@ -92,36 +134,13 @@ body,html {
   background-color:#eee;
 }
 
-.navbar-brand {
-  align-items:center;
-  display:flex;
-}
 
-.navbar-default .navbar-nav > li > a {
-  color:#FFF!important;
-  font-family:bebas-neue, sans-serif;
-  font-size:24px;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  text-decoration:underline;
-}
-
-.navbar-nav {
-  margin:7.5px -15px;
-}
-
-.navbar.navbar-default {
-  background-color:#4CBEFE;
-  border:none;
-}
 
 .wrapper {
   margin-bottom:80px;
   margin-top:80px;
 }
 
-=
 h3 {
   font-family:mr-eaves-modern,sans-serif;
 }
@@ -164,11 +183,40 @@ tbody {
   font-size:14px;
 }
 
-tbody > tr > td {
-  vertical-align:middle!important;
+
+input.editable-input {
+    width: 100%;
+}
+textarea.notes.editable-input {
+    width: 100%;
+    height: auto;
+}
+.name
+ {
+    width: 15%;
 }
 
-textarea.form-control {
+.phoneNumber {
+    width: 12%;
+}
+
+.medication {
+    width: 15%;
+}
+
+.dosage {
+    width: 10%;
+}
+.notes {
+    width: 25%;
+}
+.howOften {
+    width: 10%;
+}
+.actionButtons {
+  width:20%;
+}
+.form-control {
   height:163px;
   importantwidth:555px;
   resize:none;

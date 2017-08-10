@@ -35,18 +35,28 @@ router.post('/', function(req, res) {
 
 });
 
-router.post('/search', function(req, res) {
-  // find (select) all documents in our collection
-  console.log('search is:', req.body.search);
-  Person.find({name: req.body.search}, function(err, data) {
-    if(err) {
-      console.log('find error:', err);
-      res.sendStatus(500);
-    } else {
-      res.send(data);
-      // res.send(result.rows)
+router.put('/', function(req, res) {
+  console.log('put route');
+  console.log('New information: ', req.body);
+  var updatePerson = req.body;
+  Person.findByIdAndUpdate(
+    { _id: updatePerson._id }, // how do i find this document?
+    { $set:
+      { phoneNumber: updatePerson.phoneNumber,
+              notes: updatePerson.notes,
+              medication: updatePerson.allMeds.medication,
+              dosage: updatePerson.dosage,
+              howOften: updatePerson.howOften}
+            }, // data to replace
+    function(err, data) {
+      if(err) {
+        console.log('update error: ', err);
+        res.sendStatus(500);
+      } else {
+        res.sendStatus(200);
+      }
     }
-  });
+  )
 });
 router.delete('/:id', function(req, res) {
   console.log('delete with id: ', req.params.id);

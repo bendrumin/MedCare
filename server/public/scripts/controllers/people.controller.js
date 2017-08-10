@@ -17,11 +17,16 @@ myApp.controller('PeopleController', ['$http', function($http) {
     $http.post('/person', vm.newPerson)
     .then(function(response) {
       console.log('added person: ', response);
-      $setPristine(true);
       getPeople();
     });
   }
-
+  vm.updatePerson = function(patient) {
+    console.log('updating person:', patient);
+    $http.put('/person', patient)
+      .then(function(response) {
+        getPeople();
+      });
+  }
   vm.deletePerson = function(id) {
     console.log('delete person with id: ', id);
     $http.delete('/person/' + id)
@@ -31,7 +36,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
   }
   function getPeople() {
     $http.get('/person').then(function(response) {
-      console.log(response.data);
+      console.log('This is what logs out:', response.data);
       vm.people = response.data;
     });
   }
