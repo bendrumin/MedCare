@@ -1,5 +1,5 @@
 body {
-  background:#6979FF;
+  background:#FFF;
 }
 
 body,html {
@@ -28,7 +28,7 @@ body,html {
 }
 
 .borderRight {
-  border-right:2px solid #c9c9c9;
+  border-right:2px solid #312c32;
 }
 
 .col-md-12.inputForm {
@@ -103,10 +103,9 @@ body,html {
       background-color: white;
   }
   .navbar-default .navbar-nav > li > a {
-    color:#FFF!important;
+    color:##daad86;
     font-family:bebas-neue, sans-serif;
     font-size:24px;
-    letter-spacing: .125em;
   }
 
   .navbar-default .navbar-nav > li > a:hover {
@@ -118,12 +117,12 @@ body,html {
   }
 
   .navbar.navbar-default {
-    background-color:#9ad3de;
+    background-color:#FFF;
     border:none;
   }
 
 .header {
-  background-color:#89bdd3;
+  background-color:#FFF;
   color:#FFF;
 }
 
@@ -143,22 +142,23 @@ body,html {
 }
 
 h3 {
-  font-family:mr-eaves-modern,sans-serif;
+  font-family: bebas-neue, sans-serif;
 }
 
 
 
 h1.lead {
-  font-family:le-monde-livre-classic-sc, serif;
+  font-family: bebas-neue, sans-serif;
   font-size:48px;
   font-style:normal;
-  font-weight:500;
+  font-weight:400;
   margin:0;
   padding-top:10px;
+  color:#daad86;
 }
 
 h3 {
-  font-family:le-monde-livre-classic-sc, serif!important;
+  font-family: bebas-neue, sans-serif !important;
   font-style:normal;
   font-weight:500;
 }

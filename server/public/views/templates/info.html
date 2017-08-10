@@ -27,32 +27,36 @@
               <td class="notes">
                 <span ng-show="!rowform.$visible" editable-textarea="person.notes" e-class="notes" e-form="rowform" class="hidden-sm hidden-xs">{{person.notes}}</span></td>
               <td class="medication">
-                <p ng-show="!rowform.$visible" editable-text="meds.medication" e-form="rowform" ng-repeat="meds in person.allMeds">
+                <p ng-show="!rowform.$visible" editable-text="meds.medication" e-class="medList "e-form="rowform" ng-repeat="meds in person.allMeds">
                   {{meds.medication}}
                 </p>
               </td>
+              <!-- The medication, dosage and how often would be in a findById (which i have no clue how to do) -->
               <td class="dosage">
-                <p ng-show="!rowform.$visible" editable-text="meds.dosage" e-form="rowform"  ng-repeat="meds in person.allMeds">
+                <p ng-show="!rowform.$visible" editable-text="meds.dosage" e-form="rowform" e-class="dosageList"  ng-repeat="meds in person.allMeds">
                   {{meds.dosage}}
                 </p>
               </td>
               <td class="howOften">
-                <p ng-show="!rowform.$visible" editable-text="meds.howOften" e-form="rowform" ng-repeat="meds in person.allMeds">
+                <p ng-show="!rowform.$visible" editable-text="meds.howOften" e-form="rowform" e-class="howOftenList" ng-repeat="meds in person.allMeds">
                   {{meds.howOften}} time per day
                 </p>
               </td>
               <td class="actionButtons">
                 <form onaftersave="patient.updatePerson(person)" editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == person">
-                  <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-success">
-                    Save
+                  <button type="submit" ng-disabled="rowform.$waiting" class="btn btnWhite btn-newSuccess">
+                    <span class="glyphicon glyphicon-ok">
                   </button>
-                  <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                  <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-warning">
                     cancel
                   </button>
                 </form>
                 <div ng-show="!rowform.$visible">
-                  <button type="button" class="btn btn-primary" ng-click="rowform.$show()">Edit</button>
-                  <button type="button" class="btn btn-danger" name="button" ng-click="patient.deletePerson(person._id)">Delete</button>
+                  <button type="button" class="btn btnWhite btn-lightBlue" ng-click="rowform.$show()">
+                    <span class="glyphicon glyphicon-pencil"></span></button>
+                  <button type="button" class="btn btn btn-danger" name="button" ng-click="patient.deletePerson(person._id)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                  </button>
                 </div>
               </td>
 
