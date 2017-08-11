@@ -1,13 +1,3 @@
-body {
-  background:#6979FF;
-}
-
-body,html {
-  font-family:serif;
-  font-size:14px;
-  margin:0;
-  padding:0;
-}
 
 #container {
   margin-top:10px;
@@ -15,6 +5,17 @@ body,html {
 
 #entryForm,.container p {
   margin-top:14px;
+}
+
+.actionButtons {
+  width:20%;
+  vertical-align: middle !important;
+}
+
+.actionLinks a {
+  cursor:pointer;
+  font-size:20px;
+  padding:5px;
 }
 
 .addMed {
@@ -44,11 +45,17 @@ body,html {
   padding:0;
 }
 
+.dosage,.howOften {
+  width:10%;
+}
+
 .form-control {
   font-size:16px;
-  height:auto;
+  height:163px;
+  importantwidth:555px;
   padding:10px;
   position:relative;
+  resize:none;
 }
 
 .form-signin {
@@ -78,53 +85,14 @@ body,html {
   border-bottom-right-radius:0;
   margin-bottom:-1px;
 }
-.horizontal-collapse {
-    height: 70px;
-  }
-  .navbar-collapse.in {
-    overflow-y: hidden;
-    max-height: 2000px;
-
-  }
-  .navbar-collapse.collapse {
-          display: block;
-          overflow: hidden;
-          max-height: 0px;
-          -webkit-transition: max-height .3s ease;
-          -moz-transition: max-height .3s ease;
-          -o-transition: max-height .3s ease;
-          transition: max-height .3s ease;
-      }
-  .navbar-collapse.collapse.in {
-          max-height: 2000px;
-      }
-  .navbar-default .navbar-toggle {
-      border: none;
-      background-color: white;
-  }
-  .navbar-default .navbar-nav > li > a {
-    color:#FFF!important;
-    font-family:le-monde-livre-classic-sc, serif;
-    font-size:18px;
-    letter-spacing: .125em;
-  }
-
-  .navbar-default .navbar-nav > li > a:hover {
-    text-decoration:underline;
-  }
-
-  .navbar-nav {
-    margin:7.5px -15px;
-  }
-
-  .navbar.navbar-default {
-    background-color:#9ad3de;
-    border:none;
-  }
 
 .header {
   background-color:#89bdd3;
   color:#FFF;
+}
+
+.horizontal-collapse {
+  height:70px;
 }
 
 .message:nth-child(even) {
@@ -135,18 +103,79 @@ body,html {
   background-color:#eee;
 }
 
+.name,.medication {
+  width:15%;
+}
 
+.navbar-collapse.collapse {
+  -moz-transition:max-height .3s ease;
+  -o-transition:max-height .3s ease;
+  -webkit-transition:max-height .3s ease;
+  display:block;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .3s ease;
+}
+
+.navbar-collapse.collapse.in {
+  max-height:2000px;
+}
+
+.navbar-collapse.in {
+  max-height:2000px;
+  overflow-y:hidden;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:#FFF!important;
+  font-family:le-monde-livre-classic-sc, serif;
+  font-size:18px;
+  letter-spacing:.125em;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  text-decoration:underline;
+}
+
+.navbar-default .navbar-toggle {
+  background-color:#FFF;
+  border:none;
+}
+
+.navbar-nav {
+  margin:7.5px -15px;
+}
+
+.navbar.navbar-default {
+  background-color:#9ad3de;
+  border:none;
+}
+.padding  {
+  padding-top:15px !important;
+}
+.notes {
+  width:25%;
+}
+
+.phoneNumber {
+  width:12%;
+}
 
 .wrapper {
   margin-bottom:80px;
   margin-top:80px;
 }
 
-h3 {
-  font-family:mr-eaves-modern,sans-serif;
+body {
+  background:#6979FF;
 }
 
-
+body,html {
+  font-family:serif;
+  font-size:14px;
+  margin:0;
+  padding:0;
+}
 
 h1.lead {
   font-family:le-monde-livre-classic-sc, serif;
@@ -156,11 +185,31 @@ h1.lead {
   margin:0;
   padding-top:10px;
 }
-
+.lead a {
+    color: white;
+    cursor: pointer;
+}
+.lead a:hover {
+  color: white;
+  text-decoration: none;
+}
 h3 {
   font-family:le-monde-livre-classic-sc, serif!important;
   font-style:normal;
   font-weight:500;
+}
+
+input.editable-input {
+  border:1px solid #FFF;
+  width:100%;
+}
+
+input.editable-input:focus,textarea.notes.editable-input:focus {
+  border-radius:5px;
+}
+
+input.medList.editable-input,input.dosageList.editable-input,input.howOftenList.editable-input {
+  margin-bottom:5px;
 }
 
 li {
@@ -184,69 +233,12 @@ tbody {
   font-size:14px;
 }
 
-
-input.editable-input {
-    width: 100%;
-border: 1px solid white;
-}
-input.editable-input:focus {
-    border-radius: 5px;
-
-}
 textarea.notes.editable-input {
-    width: 100%;
-    height: 55px;
-    resize:none;
-    border-radius: 5px;
-    border:1px solid white;
-
-}
-textarea.notes.editable-input:focus {
+  border:1px solid #FFF;
   border-radius:5px;
-}
-.actionLinks a {
-    font-size: 20px;
-    cursor: pointer;
-    padding: 5px;
-}
-input.medList.editable-input {
-    margin-bottom: 5px;
-}
-input.dosageList.editable-input {
-    margin-bottom: 5px;
-}
-input.howOftenList.editable-input {
-    margin-bottom: 5px;
-}
-.name
- {
-    width: 15%;
-}
-
-.phoneNumber {
-    width: 12%;
-}
-
-.medication {
-    width: 15%;
-}
-
-.dosage {
-    width: 10%;
-}
-.notes {
-    width: 25%;
-}
-.howOften {
-    width: 10%;
-}
-.actionButtons {
-  width:20%;
-}
-.form-control {
-  height:163px;
-  importantwidth:555px;
+  height:25px;
   resize:none;
+  width:100%;
 }
 
 ul {
