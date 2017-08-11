@@ -28,7 +28,7 @@
   max-width:380px;
 }
 
-.borderRight {
+.col-md-4.borderRight {
   border-right:2px solid #c9c9c9;
 }
 
@@ -193,6 +193,7 @@ h1.lead {
   color: white;
   text-decoration: none;
 }
+
 h3 {
   font-family:le-monde-livre-classic-sc, serif!important;
   font-style:normal;
@@ -246,4 +247,16 @@ ul {
   margin:0;
   overflow:hidden;
   padding:0;
+}
+@media only screen and (min-width : 480px) {
+  .col-md-4.borderRight {
+    border-right: none;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .borderRight {
+    border-right: none;
+  }
 }

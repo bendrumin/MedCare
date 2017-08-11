@@ -9,8 +9,7 @@
             <!-- Form Name -->
             <legend>Patient Intake</legend>
             <!-- Text input-->
-            <div class="col-md-4 borderRight">
-              <h3>New Patient Form</h3>
+            <div class="col-md-4 col-sm-12 borderRight">
               <div class="form-group">
                 <div>
                   <label for="fullName">Patient Name</label>
@@ -21,7 +20,8 @@
               <!-- Text input-->
               <div class="form-group">
                 <div>
-                  <label for="phoneNumber">SMS Reminder</label>
+                  <label for="phoneNumber">Phone Number</label>
+                  <!-- Replace with SMS reminder once Twillio works -->
                   <input id="phoneNumber" name="phoneNumber" ui-mask="999-999-9999" ng-model="patient.newPerson.phoneNumber" type="text" class="form-control input-md">
 
                 </div>
@@ -37,10 +37,7 @@
 
             </div>
 
-            <div class="col-md-4 borderRight">
-              <h3>
-                Adding a medication is not required
-              </h3>
+            <div class="col-md-4 col-sm-12 borderRight">
               <!-- Text input-->
               <div class="form-group">
                 <div>
@@ -53,7 +50,7 @@
               <div class="form-group">
                 <div>
                   <label for="dosage">Dosage</label>
-                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-sm">
+                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-md">
                 </div>
               </div>
               <div class="form-group">
@@ -62,10 +59,12 @@
                   <input name="dosage" type="number" placeholder="" ng-model="patient.newPerson.howOften" class="form-control input-md">
                 </div>
               </div>
-
+              <p>
+                <p>Adding a medication is not required</p>
+              </p>
               <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.howOften)"><span class="glyphicon glyphicon-plus"></span></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
               <table class="table table-responsive medList">
                 <thead>
                   <tr>
@@ -92,7 +91,9 @@
                       <p>{{meds.howOften}} times per day</p>
                     </td>
                   </tr>
+
                 </tbody>
+
               </table>
             </div>
           </div>

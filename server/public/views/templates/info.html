@@ -15,7 +15,7 @@
               <th class="medication">Medication</th>
               <th class="dosage">Dosage</th>
               <th class="howOften">How Often</th>
-              <th class="hidden-sm hidden-xs actionButtons">Delete</th>
+              <th class="hidden-sm hidden-xs actionButtons"></th>
             </tr>
           </thead>
           <tbody>
@@ -27,18 +27,18 @@
               <td class="padding notes">
                 <span ng-show="!rowform.$visible" editable-textarea="person.notes" e-class="notes" e-form="rowform" class="hidden-sm hidden-xs">{{person.notes}}</span></td>
               <td class="padding medication">
-                <p ng-show="!rowform.$visible" editable-text="meds.medication" e-class="medList "e-form="rowform" ng-repeat="meds in person.allMeds">
+                <p ng-repeat="meds in person.allMeds">
                   {{meds.medication}}
                 </p>
               </td>
               <!-- The medication, dosage and how often would be in a findById (which i have no clue how to do) -->
               <td class="padding dosage">
-                <p ng-show="!rowform.$visible" editable-text="meds.dosage" e-form="rowform" e-class="dosageList"  ng-repeat="meds in person.allMeds">
+                <p ng-repeat="meds in person.allMeds">
                   {{meds.dosage}}
                 </p>
               </td>
               <td class="padding howOften">
-                <p ng-show="!rowform.$visible" editable-text="meds.howOften" e-form="rowform" e-class="howOftenList" ng-repeat="meds in person.allMeds">
+                <p ng-repeat="meds in person.allMeds">
                   {{meds.howOften}} time per day
                 </p>
               </td>
