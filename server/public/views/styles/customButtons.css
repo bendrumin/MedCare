@@ -21,5 +21,8 @@
   background-color: #CE1564;
 }
 .btn-newSuccess {
-  background-color: #0AD183;
+  background-color: #00A5C4;
+}
+.btn-newSuccess:hover {
+  background-color: #0B83DB;
 }

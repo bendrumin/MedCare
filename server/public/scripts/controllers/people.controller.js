@@ -18,6 +18,8 @@ myApp.controller('PeopleController', ['$http', function($http) {
     .then(function(response) {
       console.log('added person: ', response);
       getPeople();
+      successMessage();
+
     });
   }
   vm.updatePerson = function(patient) {
@@ -25,6 +27,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
     $http.put('/person', patient)
       .then(function(response) {
         getPeople();
+        saveMessage();
       });
   }
   vm.deletePerson = function(id) {
@@ -32,8 +35,26 @@ myApp.controller('PeopleController', ['$http', function($http) {
     $http.delete('/person/' + id)
     .then(function(response) {
       getPeople();
+      deleteMessage();
     });
   }
+  function successMessage() {
+    swal({
+      title: "Success!",
+      text: "The patient has been added",
+      confirmButtonText: "View Patients",
+      type: "success"
+    }).then(function() {
+           window.location.href = "#/info";
+       })
+  }
+  function saveMessage() {
+    swal('Great!', 'Your changes have been saved!', 'success')
+
+  };
+  function deleteMessage() {
+    swal('Deleted','Your patient has been deleted', 'error')
+  };
   function getPeople() {
     $http.get('/person').then(function(response) {
       console.log('This is what logs out:', response.data);
