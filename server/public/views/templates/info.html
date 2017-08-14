@@ -14,7 +14,7 @@
               <th class="hidden-sm hidden-xs notes">Notes</th>
               <th class="medication">Medication</th>
               <th class="dosage">Dosage</th>
-              <th class="howOften">How Often</th>
+              <th class="howOften">Time</th>
               <th class="hidden-sm hidden-xs actionButtons"></th>
             </tr>
           </thead>
@@ -39,7 +39,11 @@
               </td>
               <td class="padding howOften">
                 <p ng-repeat="meds in person.allMeds">
-                  {{meds.howOften}} time per day
+                  {{meds.timeOne | date: "HH:mm:ss"}}
+                  {{meds.timeTwo | date: "HH:mm:ss"}}
+                  {{meds.timeThree | date: "HH:mm:ss"}}
+                  {{meds.timeFour | date: "HH:mm:ss"}}
+                  {{meds.timeFive | date: "HH:mm:ss"}}
                 </p>
               </td>
               <td class="actionButtons">

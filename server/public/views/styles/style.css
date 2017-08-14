@@ -104,7 +104,11 @@
 }
 
 .name,.medication {
-  width:15%;
+  width:11%;
+}
+.col-md-4.timeScroll {
+    overflow: auto;
+    max-height: 207px;
 }
 
 .navbar-collapse.collapse {

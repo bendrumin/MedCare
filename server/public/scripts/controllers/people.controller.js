@@ -2,6 +2,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
   var vm = this;
   vm.newPerson = {};
   vm.allMeds = [];
+
   // vm.addMedication = {};
   // get the people data from the server and fill the DOM
   getPeople();
@@ -61,11 +62,15 @@ myApp.controller('PeopleController', ['$http', function($http) {
       vm.people = response.data;
     });
   }
-  vm.addMedication = function(med, dosage, howOften) {
+  vm.addMedication = function(med, dosage, timeOne, timeTwo, timeThree, timeFour, timeFive) {
     var newMed = {
       medication: med,
       dosage: dosage,
-      howOften: howOften
+      timeOne: timeOne,
+      timeTwo: timeTwo,
+      timeThree: timeThree,
+      timeFour: timeFour,
+      timeFive: timeFive
     }
     console.log(vm.newPerson.medication);
     vm.allMeds.push(newMed);
