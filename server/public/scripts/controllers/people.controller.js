@@ -5,7 +5,6 @@ myApp.controller('PeopleController', ['$http', function($http) {
   // vm.addMedication = {};
   // get the people data from the server and fill the DOM
   getPeople();
-
   vm.addPerson = function(name, phoneNumber, notes) {
     vm.newPerson = {
       name: name,
@@ -51,21 +50,28 @@ myApp.controller('PeopleController', ['$http', function($http) {
   function saveMessage() {
     swal('Great!', 'Your changes have been saved!', 'success')
 
-  };
+  }
   function deleteMessage() {
     swal('Deleted','Your patient has been deleted', 'error')
-  };
+  }
   function getPeople() {
     $http.get('/person').then(function(response) {
       console.log('This is what logs out:', response.data);
       vm.people = response.data;
     });
   }
-  vm.addMedication = function(med, dosage, howOften) {
+  vm.addMedication = function(med, dosage, eight, ten, twelve, two, four, six, eightPm, tenPm) {
     var newMed = {
       medication: med,
       dosage: dosage,
-      howOften: howOften
+      eight: eight,
+      ten: ten,
+      twelve: twelve,
+      two: two,
+      four: four,
+      six: six,
+      eightPm: eightPm,
+      tenPm: tenPm
     }
     console.log(vm.newPerson.medication);
     vm.allMeds.push(newMed);

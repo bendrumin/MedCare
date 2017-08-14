@@ -85,6 +85,14 @@
   border-bottom-right-radius:0;
   margin-bottom:-1px;
 }
+.abc-checkbox-primary {
+  margin-left: 20px;
+
+}
+.form-group.checkboxList {
+    overflow: auto;
+    height: 150px;
+}
 
 .header {
   background-color:#89bdd3;
@@ -216,7 +224,12 @@ input.medList.editable-input,input.dosageList.editable-input,input.howOftenList.
 li {
   float:left;
 }
-
+.list-group li {
+  float: none;
+}
+.list-group-item {
+  border-bottom: 1px solod #ddd;
+}
 li a {
   color:#FFF;
   display:block;
@@ -242,12 +255,6 @@ textarea.notes.editable-input {
   width:100%;
 }
 
-ul {
-  list-style-type:none;
-  margin:0;
-  overflow:hidden;
-  padding:0;
-}
 @media only screen and (min-width : 480px) {
   .col-md-4.borderRight {
     border-right: none;

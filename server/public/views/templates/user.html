@@ -9,7 +9,7 @@
             <!-- Form Name -->
             <legend>Patient Intake</legend>
             <!-- Text input-->
-            <div class="col-md-4 col-sm-12 borderRight">
+            <div class="col-md-6 col-sm-12 borderRight">
               <div class="form-group">
                 <div>
                   <label for="fullName">Patient Name</label>
@@ -37,7 +37,7 @@
 
             </div>
 
-            <div class="col-md-4 col-sm-12 borderRight">
+            <div class="col-md-6 col-sm-12 borderRight">
               <!-- Text input-->
               <div class="form-group">
                 <div>
@@ -53,69 +53,125 @@
                   <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-md">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group checkboxList">
                 <div>
-                  <label for="dosage">How Often (Times per day)</label>
-                  <input name="dosage" type="number" placeholder="" ng-model="patient.newPerson.howOften" class="form-control input-md">
+                  <label class="control-label">How Often?</label>
+
+                  <!-- Change to an ng-repeat function -->
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox1" name="eight" ng-true-value="'8 am'" ng-change="string" ng-model="patient.newPerson.eight" value="8">
+                    <label for="checkbox1">8 am</label>
+                  </div>
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox2" name="ten" ng-true-value="'10 am'" ng-change="string" ng-model="patient.newPerson.ten" value="10">
+                    <label for="checkbox2">10 am</label>
+                  </div>
+
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox3" name="twelve" ng-true-value="'12 pm'" ng-change="string" ng-model="patient.newPerson.twelve" value="12">
+                    <label for="checkbox3">12 pm</label>
+                  </div>
+
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox4" name="two" ng-true-value="'2 pm'" ng-change="string" ng-model="patient.newPerson.two" value="2">
+                    <label for="checkbox4">2 pm</label>
+                  </div>
+
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox5" name="four" ng-true-value="'4 pm'" ng-change="string" ng-model="patient.newPerson.four" value="4">
+                    <label for="checkbox5">8 am</label>
+                  </div>
+
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox" name="six" ng-true-value="'6 pm'" ng-change="string" ng-model="patient.newPerson.six" value="6">
+                    <label for="checkbox6">10 am</label>
+                  </div>
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox7" name="eightPm" ng-true-value="'8 pm'" ng-change="string" ng-model="patient.newPerson.eightPm" value="8">
+                    <label for="checkbox7">12 pm</label>
+                  </div>
+
+                  <div class="checkbox abc-checkbox-primary" >
+                    <input type="checkbox" id="checkbox8" name="tenPm" ng-true-value="'10 pm'" ng-change="string" ng-model="patient.newPerson.tenPm" value="10">
+                    <label for="checkbox8">10 pm</label>
+                  </div>
+
                 </div>
               </div>
-              <p>
-                <p>Adding a medication is not required</p>
-              </p>
-              <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.howOften)"><span class="glyphicon glyphicon-plus"></span></button>
             </div>
-            <div class="col-md-4 col-sm-12">
-              <table class="table table-responsive medList">
-                <thead>
-                  <tr>
-                    <th>
-                      Medication
-                    </th>
-                    <th>
-                      Dosage
-                    </th>
-                    <th>
-                      How Often
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr ng-repeat="meds in patient.allMeds" >
-                    <td>
-                      <p class="medicationList">{{meds.medication}}</p>
-                    </td>
-                    <td>
-                      <p>{{meds.dosage}}</p>
-                    </td>
-                    <td>
-                      <p>{{meds.howOften}} times per day</p>
-                    </td>
-                  </tr>
 
-                </tbody>
 
-              </table>
-            </div>
           </div>
+          <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.eight, patient.newPerson.ten, patient.newPerson.twelve, patient.newPerson.two, patient.newPerson.four, patient.newPerson.six, patient.newPerson.eightPm, patient.newPerson.tenPm)"><span class="glyphicon glyphicon-plus"></span></button>
 
         </div>
+        <div class="row">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10">
+          <div class="col-md-12 col-sm-12">
+            <table class="table table-responsive medList">
+              <thead>
+                <tr>
+                  <th>
+                    Medication
+                  </th>
+                  <th>
+                    Dosage
+                  </th>
+                  <th>
+                    Times
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="meds in patient.allMeds" >
+                  <td>
+                    <p class="medicationList">{{meds.medication}}</p>
+                  </td>
+                  <td>
+                    <p>{{meds.dosage}}</p>
+                  </td>
+                  <td>
+                    <p>{{meds.eight}}</p>
+                    <p>{{meds.ten}}</p>
+                    <p>{{meds.twelve}}</p>
+                    <p>{{meds.two}}</p>
+                    <p>{{meds.four}}</p>
+                    <p>{{meds.six}}</p>
+                    <p>{{meds.eightPm}}</p>
+                    <p>{{meds.tenPm}}</p>
+                  </td>
+                </tr>
 
-            </div>
-            <div class="col-md-2">
-              <button class="btn btnWhite btn-lightBlue btn-md" ng-click="patient.addPerson(patient.newPerson.name, patient.newPerson.phoneNumber, patient.newPerson.notes);">Add Patient</button>
+              </tbody>
 
-            </div>
+            </table>
           </div>
         </div>
 
-      </fieldset>
-    </form>
+      </div>
 
-  </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+
+          </div>
+          <div class="col-md-2">
+            <button class="btn btnWhite btn-lightBlue btn-md" ng-click="patient.addPerson(patient.newPerson.name, patient.newPerson.phoneNumber, patient.newPerson.notes);">Add Patient</button>
+
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+</div>
 </div>
 
 </div>
