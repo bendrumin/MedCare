@@ -21,7 +21,6 @@
 .addMed {
   border:0 solid transparent;
 }
-
 .alert.alert-danger.loginError {
   border-radius:0;
   margin:0 auto;
@@ -158,7 +157,7 @@
   padding-top:15px !important;
 }
 .notes {
-  width:25%;
+  width:35%;
 }
 
 .phoneNumber {
@@ -241,11 +240,15 @@ tbody {
 textarea.notes.editable-input {
   border:1px solid #FFF;
   border-radius:5px;
-  height:25px;
   resize:none;
   width:100%;
 }
-
+.medList th {
+    padding-top: 0 !important;
+}
+textarea#notes {
+    height: 34px;
+}
 ul {
   list-style-type:none;
   margin:0;

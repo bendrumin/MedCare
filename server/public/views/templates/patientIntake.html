@@ -34,11 +34,6 @@
                   <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes"></textarea>
                 </div>
               </div>
-
-            </div>
-
-            <div class="col-md-4 col-sm-12 borderRight">
-              <!-- Text input-->
               <div class="form-group">
                 <div>
                   <label for="medication">Medication</label>
@@ -57,8 +52,10 @@
               <p>
                 <p>Adding a medication is not required</p>
               </p>
+
             </div>
-            <div class="col-md-4 timeScroll">
+
+            <div class="col-md-2">
               <div class="form-group">
                 <label for="">What time</label>
               <input type="time" name="" ng-model="patient.newPerson.timeOne" class="form-control input-md" value="">
@@ -79,12 +76,12 @@
                 <label for="">Fifth Pill</label>
               <input type="time" name="" ng-model="patient.newPerson.timeFive" class="form-control input-md" value="">
             </div>
+            <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.timeOne, patient.newPerson.timeTwo, patient.newPerson.timeThree, patient.newPerson.timeFour, patient.newPerson.timeFive)">Add Medication</button>
 
             </div>
-            <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.timeOne, patient.newPerson.timeTwo, patient.newPerson.timeThree, patient.newPerson.timeFour, patient.newPerson.timeFive)"><span class="glyphicon glyphicon-plus"></span></button>
 
 
-            <div class="col-md-12 col-sm-12">
+            <div class="col-md-6 col-sm-12">
               <table class="table table-responsive medList">
                 <thead>
                   <tr>
@@ -108,14 +105,11 @@
                       <p>{{meds.dosage}}</p>
                     </td>
                     <td>
-                      <p>{{meds.howOften}}</p>
-                    </td>
-                    <td>
-                      <p>{{meds.timeOne | date: "hh:mm:ss"}}</p>
-                      <p>{{meds.timeTwo | date: "hh:mm:ss"}}</p>
-                      <p>{{meds.timeThree | date: "hh:mm:ss"}}</p>
-                      <p>{{meds.timeFour | date: "hh:mm:ss"}}</p>
-                      <p>{{meds.timeFive | date: "hh:mm:ss"}}</p>
+                      <p>{{meds.timeOne | date: "h:mma"}}</p>
+                      <p>{{meds.timeTwo | date: "h:mma"}}</p>
+                      <p>{{meds.timeThree | date: "h:mma"}}</p>
+                      <p>{{meds.timeFour | date: "h:mma"}}</p>
+                      <p>{{meds.timeFive | date: "h:mma"}}</p>
                     </td>
                   </tr>
 
@@ -123,6 +117,7 @@
 
               </table>
             </div>
+
           </div>
 
         </div>
