@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['xeditable','ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.utils']);
+var myApp = angular.module('myApp', ['xeditable','checklist-model', 'ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.utils']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -36,6 +36,6 @@ myApp.config(function($routeProvider, $locationProvider) {
     });
 
 });
-app.run(function(editableOptions) {
+myApp.run(function(editableOptions) {
   editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });

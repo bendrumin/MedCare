@@ -73,6 +73,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
       eightPm: eightPm,
       tenPm: tenPm
     }
+    console.log('button clicked');
     console.log(vm.newPerson.medication);
     vm.allMeds.push(newMed);
     console.log(dosage);
