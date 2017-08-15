@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['xeditable','ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.utils']);
+var myApp = angular.module('myApp', ['xeditable','ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.utils', 'ui.bootstrap.modal']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -18,7 +18,7 @@ myApp.config(function($routeProvider, $locationProvider) {
       controller: 'PeopleController as patient'
     })
     .when('/user', {
-      templateUrl: '/views/templates/user.html',
+      templateUrl: '/views/templates/patientIntake.html',
       controller: 'UserController as uc',
       resolve: {
         getuser : function(UserService){

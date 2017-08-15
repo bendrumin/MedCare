@@ -3,6 +3,7 @@
 
   <div class="container" ng-controller="PeopleController as patient">
     <div class="col-md-12 inputForm">
+
       <div class="row">
         <form>
           <fieldset>
@@ -10,6 +11,7 @@
             <legend>Patient Intake</legend>
             <!-- Text input-->
             <div class="col-md-4 col-sm-12 borderRight">
+
               <div class="form-group">
                 <div>
                   <label for="fullName">Patient Name</label>
@@ -105,11 +107,11 @@
                       <p>{{meds.dosage}}</p>
                     </td>
                     <td>
-                      <p>{{meds.timeOne | date: "h:mma"}}</p>
-                      <p>{{meds.timeTwo | date: "h:mma"}}</p>
-                      <p>{{meds.timeThree | date: "h:mma"}}</p>
-                      <p>{{meds.timeFour | date: "h:mma"}}</p>
-                      <p>{{meds.timeFive | date: "h:mma"}}</p>
+                      <p>{{meds.timeOne | date: "hh:mm a"}}</p>
+                      <p>{{meds.timeTwo | date: "hh:mm a"}}</p>
+                      <p>{{meds.timeThree | date: "hh:mm a"}}</p>
+                      <p>{{meds.timeFour | date: "hh:mm a"}}</p>
+                      <p>{{meds.timeFive | date: "hh:mm a"}}</p>
                     </td>
                   </tr>
 

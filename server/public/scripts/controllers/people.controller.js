@@ -3,6 +3,8 @@ myApp.controller('PeopleController', ['$http', function($http) {
   vm.newPerson = {};
   vm.allMeds = [];
 
+  
+
   // vm.addMedication = {};
   // get the people data from the server and fill the DOM
   getPeople();
