@@ -9,7 +9,6 @@
 
 .actionButtons {
   width:20%;
-  vertical-align: middle !important;
 }
 
 .actionLinks a {
@@ -103,13 +102,15 @@
 }
 
 .name,.medication {
-  width:11%;
+  width:10%;
 }
 .col-md-4.timeScroll {
     overflow: auto;
     max-height: 207px;
 }
-
+.form-control:focus {
+  border: none;
+}
 .navbar-collapse.collapse {
   -moz-transition:max-height .3s ease;
   -o-transition:max-height .3s ease;
@@ -219,7 +220,7 @@ input.medList.editable-input,input.dosageList.editable-input,input.howOftenList.
 li {
   float:left;
 }
-
+input.editable-input {}
 li a {
   color:#FFF;
   display:block;
@@ -242,12 +243,16 @@ textarea.notes.editable-input {
   border-radius:5px;
   resize:none;
   width:100%;
+  margin-top: -1px;
 }
 .medList th {
     padding-top: 0 !important;
 }
 textarea#notes {
     height: 34px;
+}
+.form-control {
+  height: 25px;
 }
 ul {
   list-style-type:none;

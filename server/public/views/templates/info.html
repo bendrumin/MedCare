@@ -44,7 +44,9 @@
                   {{meds.timeThree | date: "h:mma"}}
                   {{meds.timeFour | date: "h:mma"}}
                   {{meds.timeFive | date: "h:mma"}}
+
                 </p>
+
               </td>
               <td class="actionButtons">
                 <form onaftersave="patient.updatePerson(person)" editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == person">
