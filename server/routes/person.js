@@ -44,9 +44,7 @@ router.put('/', function(req, res) {
     { $set:
       { phoneNumber: updatePerson.phoneNumber,
               notes: updatePerson.notes,
-              medication: updatePerson.allMeds.medication,
-              dosage: updatePerson.dosage,
-              howOften: updatePerson.howOften}
+              allMeds: updatePerson.allMeds}
             }, // data to replace
     function(err, data) {
       if(err) {

@@ -34,7 +34,7 @@
               <!-- The medication, dosage and how often would be in a findById (which i have no clue how to do) -->
               <td class="padding dosage">
                 <p ng-repeat="meds in person.allMeds">
-                  {{meds.dosage}}
+                  <span ng-show="!rowform.$visible" editable-textarea="meds.dosage" e-class="notes" e-form="rowform" class="hidden-sm hidden-xs">{{meds.dosage}}</span>
                 </p>
               </td>
               <td class="padding howOften">
