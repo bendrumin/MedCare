@@ -13,16 +13,21 @@
             <div class="col-md-4 col-sm-12 borderRight">
 
               <div class="form-group">
-                <div>
-                  <label for="fullName">Patient Name</label>
-                  <input id="fullName" name="fullName" ng-model="patient.newPerson.name" type="text" placeholder="Name" class="form-control input-md">
+                <label for="Name">Name</label>
+
+                <div class="input-group">
+
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+
+                  <input id="fullName" name="fullName" ng-model="patient.newPerson.name" type="text" placeholder="Name" class="form-control input-md" alt="Patient Name">
                 </div>
               </div>
 
               <!-- Text input-->
               <div class="form-group">
-                <div>
-                  <label for="phoneNumber">Phone Number</label>
+                <label for="Phone Number">Phone Number</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                   <!-- Replace with SMS reminder once Twillio works -->
                   <input id="phoneNumber" name="phoneNumber" ui-mask="999-999-9999" ng-model="patient.newPerson.phoneNumber" type="text" class="form-control input-md">
 
@@ -31,15 +36,19 @@
 
               <!-- Textarea -->
               <div class="form-group">
-                <div>
-                  <label for="notes">Notes</label>
-                  <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes"></textarea>
+                <label for="Notes">Notes</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-sticky-note"></i></span>
+                  <textarea class="form-control" id="notes" name="notes" ng-model="patient.newPerson.notes" placeholder="Notes"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <div>
                   <label for="medication">Medication</label>
-                  <input name="medication" type="text" placeholder="" ng-model="patient.newPerson.medication" class="form-control input-md">
+                  <div class="input-group">
+
+                  <span class="input-group-addon"><i class="fa fa-medkit"></i></span>
+
+                  <input name="medication" type="text" placeholder="Medication" ng-model="patient.newPerson.medication" class="form-control input-md">
                 </div>
               </div>
 
@@ -47,9 +56,13 @@
               <div class="form-group">
                 <div>
                   <label for="dosage">Dosage</label>
-                  <input name="dosage" type="text" placeholder="" ng-model="patient.newPerson.dosage" class="form-control input-md">
+                  <div class="input-group">
+
+                  <span class="input-group-addon"><i class="fa fa-medkit"></i></span>
+                  <input name="dosage" type="text" placeholder="Dosage" ng-model="patient.newPerson.dosage" class="form-control input-md">
                 </div>
               </div>
+            </div>
 
               <p>
                 <p>Adding a medication is not required</p>
@@ -60,24 +73,44 @@
             <div class="col-md-2">
               <div class="form-group">
                 <label for="">What time</label>
+                <div class="input-group">
               <input type="time" name="" ng-model="patient.newPerson.timeOne" class="form-control input-md" value="">
+              <span class="input-group-addon"><i class="fa fa-clock"></i></span>
+
             </div>
+          </div>
               <div class="form-group">
                 <label for="">Second Pill</label>
+                <div class="input-group">
               <input type="time" name="" ng-model="patient.newPerson.timeTwo" class="form-control input-md" value="">
+              <span class="input-group-addon"><i class="fa fa-clock"></i></span>
+
             </div>
+          </div>
               <div class="form-group">
                 <label for="">Third Pill</label>
+                <div class="input-group">
               <input type="time" name="" ng-model="patient.newPerson.timeThree" class="form-control input-md" value="">
+              <span class="input-group-addon"><i class="fa fa-clock"></i></span>
+
             </div>
+          </div>
               <div class="form-group">
                 <label for="">Fourth Pill</label>
+                <div class="input-group ">
               <input type="time" name="" ng-model="patient.newPerson.timeFour" class="form-control input-md" value="">
+              <span class="input-group-addon"><i class="fa fa-clock"></i></span>
+
             </div>
+          </div>
               <div class="form-group">
                 <label for="">Fifth Pill</label>
+                <div class="input-group">
               <input type="time" name="" ng-model="patient.newPerson.timeFive" class="form-control input-md" value="">
+              <span class="input-group-addon"><i class="fa fa-clock"></i></span>
+
             </div>
+          </div>
             <button type="button" class="btn btn-link btn-sm pull-right addMed" name="button" ng-click="patient.addMedication(patient.newPerson.medication, patient.newPerson.dosage, patient.newPerson.timeOne, patient.newPerson.timeTwo, patient.newPerson.timeThree, patient.newPerson.timeFour, patient.newPerson.timeFive)">Add Medication</button>
 
             </div>

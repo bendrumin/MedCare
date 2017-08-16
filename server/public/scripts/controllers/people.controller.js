@@ -34,12 +34,27 @@ myApp.controller('PeopleController', ['$http', function($http) {
       });
   }
   vm.deletePerson = function(id) {
+    swal({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then(function () {
+      $http.delete('/person/' + id)
+      .then(function(response) {
+        getPeople();
+      });
+      swal(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    })
     console.log('delete person with id: ', id);
-    $http.delete('/person/' + id)
-    .then(function(response) {
-      getPeople();
-      deleteMessage();
-    });
+
   }
   function successMessage() {
     swal({
@@ -56,8 +71,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
 
   };
   function deleteMessage() {
-    swal('Deleted','Your patient has been deleted', 'error')
-  };
+    };
   function getPeople() {
     $http.get('/person').then(function(response) {
       console.log('This is what logs out:', response.data);

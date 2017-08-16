@@ -6,11 +6,20 @@
   <form ng-submit="lc.login()" class="form-signin">
 
       <h2 class="form-signin-heading">Please login</h2>
-      <input type="text" class="form-control" name="username" placeholder="Username" ng-model="lc.user.username" required="" autofocus="" />
-      <input type="password" ng-model="lc.user.password" class="form-control" name="password" placeholder="Password" required=""/>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control " name="username" placeholder="Username" ng-model="lc.user.username" required="" autofocus="" />
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+        <input type="password" ng-model="lc.user.password" class="form-control" name="password" placeholder="Password" required=""/>
 
-      <button class="submit btn btn-md btn-primary" type="submit" name="submit" value="Log In">Login</button>
-       <a href="#register" class="btn btn-link">Register</a>
+      </div>
+
+      <div class="submitButton">
+        <button class="submit btn btn-md btn-primary" type="submit" name="submit" value="Log In">Login</button>
+        <a href="#register" class="btn btn-link">Register</a>
+      </div>
     </form>
   </div>
 </div>

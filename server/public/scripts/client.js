@@ -41,5 +41,5 @@ myApp.config(function($routeProvider, $locationProvider) {
 
 });
 myApp.run(function(editableOptions) {
-  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+  editableOptions.theme = 'font-awesome'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });

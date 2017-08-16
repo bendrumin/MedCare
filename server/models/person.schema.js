@@ -8,6 +8,5 @@ var personSchema = new Schema({
   notes: {type: String},
   allMeds: [] // [medicationSchema]
 });
-
 // export our model
 module.exports = mongoose.model('Person', personSchema);
