@@ -1,7 +1,7 @@
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" role="navigation" ng-controller="NavController">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+      <div class="navbar-header" ng-init="navCollapsed = true">
+        <button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -9,8 +9,8 @@
         </button>
       </div>
       <!-- https://plnkr.co/edit/?p=preview -->
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right" ng-class="!navCollapsed && 'in'">
+      <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
+        <ul class="nav navbar-nav navbar-right" >
           <li><a href="#/patientIntake">Home</a></li>
           <li><a href="#/info">View Patients</a></li>
           <li><a href="#" ng-click="uc.userService.logout()">Log Out</a></li>

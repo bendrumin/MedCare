@@ -26,12 +26,12 @@
   max-width:380px;
 }
 
-.col-md-4.borderRight {
+.col-md-4.borderRight, .col-md-3.borderRight {
   border-right:2px solid #c9c9c9;
 }
 
 .col-md-12.inputForm {
-  margin-bottom:25px;
+  margin-bottom:40px;
 }
 
 .container legend {
@@ -78,15 +78,15 @@
   border-top-right-radius:0;
 }
 .submitButton {
-    padding-top: 25px;
+  padding-top: 25px;
 }
 .form-signin input[type="text"]
- {
+{
   margin-bottom:-1px;
 }
 
 .header {
-  background-color:#89bdd3;
+  background-color:#c0dfd9;
   color:#FFF;
 }
 
@@ -106,8 +106,8 @@
   width:10%;
 }
 .col-md-4.timeScroll {
-    overflow: auto;
-    max-height: 207px;
+  overflow: auto;
+  max-height: 207px;
 }
 .form-control:focus {
   border: none;
@@ -132,13 +132,18 @@
 }
 
 .navbar-default .navbar-nav > li > a {
-  color:#FFF!important;
-  font-family:le-monde-livre-classic-sc, serif;
-  font-size:18px;
-  letter-spacing:.125em;
+  color:#3b3a36!important;
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size:28px;
+  letter-spacing:.085em;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
+  text-decoration:underline;
+}
+.navbar-default .navbar-nav > li > a:active {
   text-decoration:underline;
 }
 
@@ -152,7 +157,7 @@
 }
 
 .navbar.navbar-default {
-  background-color:#9ad3de;
+  background-color:#e9ece5;
   border:none;
 }
 .padding  {
@@ -171,28 +176,31 @@
   margin-top:80px;
 }
 
-body {
-  background:#6979FF;
+html {
+  min-height: 100%;
+  position: relative;
 }
 
-body,html {
-  font-family:serif;
+body,html, .container {
   font-size:14px;
   margin:0;
   padding:0;
 }
 
 h1.lead {
-  font-family:le-monde-livre-classic-sc, serif;
+  font-family: proxima-nova, sans-serif;
   font-size:48px;
   font-style:normal;
-  font-weight:500;
+  font-weight:700;
   margin:0;
   padding-top:10px;
 }
+h1.lead span {
+  font-weight:100;
+}
 .lead a {
-    color: white;
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
 }
 .lead a:hover {
   color: white;
@@ -200,16 +208,16 @@ h1.lead {
 }
 
 h3 {
-  font-family:le-monde-livre-classic-sc, serif!important;
+  font-family: proxima-nova, sans-serif !important;
   font-style:normal;
   font-weight:500;
 }
 
 input.editable-input {
   width:100%;
-      padding: 2px;
-      height: auto;
-      border: none;
+  padding: 2px;
+  height: auto;
+  border: none;
 }
 
 input.editable-input:focus,textarea.notes.editable-input:focus {
@@ -242,17 +250,17 @@ tbody {
 
 textarea.notes.editable-input {
   border-radius: 5px;
-      padding: 2px;
-      height: auto;
-      width: 100%;
-      resize: none;
-      border: none;
+  padding: 2px;
+  height: auto;
+  width: 100%;
+  resize: none;
+  border: none;
 }
 .medList th {
-    padding-top: 0 !important;
+  padding-top: 0 !important;
 }
 textarea#notes {
-    height: 34px;
+  height: 34px;
 }
 .form-control {
   height: 25px;
@@ -263,15 +271,82 @@ ul {
   overflow:hidden;
   padding:0;
 }
-@media only screen and (min-width : 480px) {
-  .col-md-4.borderRight {
+@media (max-width: 972px) {
+  .col-md-4.borderRight, .col-md-3.borderRight {
     border-right: none;
+  }
+  .container.mainSection {
+    border: none !important;
   }
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .borderRight {
-    border-right: none;
+button.btn.btnWhite.btn-lightBlue.btn-md {
+  margin-bottom: 20px;
+}
+.peopleInfo tr {
+  border-bottom: 1px solid #dfdfdf;
+}
+#footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 60px;
+  background-color: #3b3a36;
+  color: #e9ece5;
+}
+.footer-block p {
+  margin: 20px 0;
+}
+.container.mainSection {
+  border: 1px solid #c9c9c9;
+}
+.container.mainSection.peopleInfo {
+  min-height: 650px;
+}
+@media (min-width: 768px) {
+.navbar-right {
+    margin-right: -45px !important;
   }
+}
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+        padding: 5px 0;
+    }
+    .navbar-collapse.collapse.in li a {
+        background-color:white !important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }
