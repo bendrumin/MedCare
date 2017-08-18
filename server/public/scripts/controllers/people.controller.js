@@ -97,5 +97,14 @@ myApp.controller('PeopleController', ['$http', function($http) {
     vm.allMeds.push(newMed);
     console.log(dosage);
     console.log(vm.allMeds);
+
+    allMeds = [];
+    vm.newPerson.medication = "";
+    vm.newPerson.dosage = "";
+    // newPerson.timeOne = "";
+    vm.newPerson.timeTwo = "";
+    vm.newPerson.timeThree = "";
+    vm.newPerson.timeFour = "";
+    vm.newPerson.timeFive = "";
   }
 }]);
