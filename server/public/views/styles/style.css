@@ -225,6 +225,7 @@ h1.lead span {
 .lead a {
   color: white;
   cursor: pointer;
+  font-size: 56px;
 }
 .lead a:hover {
   color: white;
@@ -314,6 +315,9 @@ button.btn.btnWhite.btn-lightBlue.btn-md {
 .peopleInfo tr {
   border-bottom: 1px solid #dfdfdf;
 }
+.btn-primary {
+  background-color: #839EAC;
+}
 #footer {
   bottom: 0;
   width: 100%;
@@ -377,4 +381,14 @@ button.btn.btnWhite.btn-lightBlue.btn-md {
     .collapsing {
         overflow: hidden!important;
     }
+    .form-signin {
+    background-color: #fff;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.form-signin input {
+    height: 56px;
+    font-size: 28px;
+}
 }
