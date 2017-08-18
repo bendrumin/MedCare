@@ -39,8 +39,8 @@ myApp.controller('PeopleController', ['$http', function($http) {
       text: "You won't be able to revert this!",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#E3968B',
+      cancelButtonColor: '#839EAC',
       confirmButtonText: 'Yes, delete it!'
     }).then(function () {
       $http.delete('/person/' + id)
@@ -61,14 +61,19 @@ myApp.controller('PeopleController', ['$http', function($http) {
       title: "Success!",
       text: "The patient has been added",
       confirmButtonText: "View Patients",
+      confirmButtonColor: '#839EAC',
       type: "success"
     }).then(function() {
            window.location.href = "#/info";
        })
   }
   function saveMessage() {
-    swal('Great!', 'Your changes have been saved!', 'success')
-
+    swal({
+      title: "Great!",
+      text: "Your changes have been saved!",
+      type: "success",
+      confirmButtonColor: '#839EAC'
+    })
   };
   function deleteMessage() {
     };
