@@ -38,7 +38,7 @@
                 </p>
               </td>
               <td class=" howOften">
-                <p ng-repeat="meds in person.allMeds">
+                <p ng-repeat="meds in person.allMeds" class="medTime">
                   <span class="medTime">{{meds.timeOne | date: "h:mma"}}</span>
                   <span class="medTime">{{meds.timeTwo | date: "h:mma"}}</span>
                   <span class="medTime">{{meds.timeThree | date: "h:mma"}}</span>
