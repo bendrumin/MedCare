@@ -16,7 +16,24 @@
   font-size:20px;
   padding:5px;
 }
-
+.fa-trash-alt {
+  color: #E3968B;
+}
+.fa-trash-alt:hover {
+  color: #AC8386;
+}
+.fa-edit {
+  color: #839EAC;
+}
+.fa-edit:hover {
+  color: #386279;
+}
+.fa-times {
+  color: #C34F4A;
+}
+.fa-times:hover {
+  color: #762521;
+}
 .addMed {
   border:0 solid transparent;
 }
@@ -42,7 +59,9 @@
   margin:0;
   padding:0;
 }
-
+td {
+  vertical-align: middle !important;
+}
 .dosage,.howOften {
   width:10%;
 }
@@ -247,14 +266,18 @@ li a:hover {
 tbody {
   font-size:14px;
 }
+button.btn.btn-link {
+  width: 40px;
+}
 
 textarea.notes.editable-input {
   border-radius: 5px;
   padding: 2px;
-  height: auto;
   width: 100%;
   resize: none;
+  height: 25px;
   border: none;
+  vertical-align: middle;
 }
 .medList th {
   padding-top: 0 !important;
