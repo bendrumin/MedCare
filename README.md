@@ -1,34 +1,39 @@
 # Name of Project
 
-One Paragraph of project description goes here. Link to the live version of the app if it's hosted on Heroku.
+MedCare is a medical website for homecare and hospitals to use to keep track of medication.  It allows the caregivers to add patients into a database, add what medication they are on and what time they take it.  It also allows the registered user to edit notes, phone number, and medication if needed.
 
 ## Built With
 
-List technologies and frameworks here
+MongoDB
+Express
+AngularJS
+Node.js
+Bootstrap
+CSS
+Javascript
+Mask-ui.js
+UI Bootstrap
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Open terminal, and cd to this location and run npm install --save
 
 ### Prerequisites
 
 Link to software that is required to install the app (e.g. node).
 
 - [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
+- [NPM.js] https://www.npmjs.com/
 
 
 ### Installing
 
-Steps to get the development environment running.
-
+- Either clone or fork this repo
+- Open a command prompt window, go to the location of this local repo and type npm install --save
 ## Screen Shot
 
 Include one or two screen shots of your project here (optional). Remove if unused.
 
-## Documentation
-
-Link to a read-only version of your scope document or other relevant documentation here (optional). Remove if unused.
 
 ### Completed Features
 
@@ -40,17 +45,12 @@ High level list of items completed.
 
 ### Next Steps
 
-Features that you would like to add at some point in the future.
+- [] Add the ability to send emails and get push noticications to a mobile device
 
-- [ ] Feature c
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* Name of author(s)
+* Ben Siegel
 
 
 ## Acknowledgments
