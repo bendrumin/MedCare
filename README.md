@@ -18,7 +18,7 @@ UI Bootstrap
 
 Open terminal, and cd to this location and run npm install --save
 
-### Prerequisites 
+### Prerequisites
 
 Link to software that is required to install the app (e.g. node).
 
@@ -45,7 +45,7 @@ High level list of items completed.
 
 ### Next Steps
 
-- [] Add the ability to send emails and get push noticications to a mobile device
+- [] Add the ability to send emails and get push notifications to a mobile device
 
 
 ## Authors
